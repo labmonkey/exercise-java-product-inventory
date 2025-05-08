@@ -1,13 +1,13 @@
-package com.exercise;
+package com.exercise.inventory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExerciseJavaApplication {
+public class ProductInventoryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExerciseJavaApplication.class, args);
+		SpringApplication.run(ProductInventoryApplication.class, args);
 	}
 
 }
