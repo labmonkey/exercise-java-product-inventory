@@ -1,0 +1,13 @@
+
+CREATE TABLE user_roles (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    role VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE users (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(120) NOT NULL,
+    role_id BIGINT,
+    FOREIGN KEY (role_id) REFERENCES user_roles(id) ON DELETE RESTRICT
+);

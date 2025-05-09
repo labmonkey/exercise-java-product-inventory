@@ -1,0 +1,13 @@
+CREATE TABLE category (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    version BIGINT
+);
+
+ALTER TABLE product
+ADD COLUMN category_id BIGINT;
+
+ALTER TABLE product
+ADD CONSTRAINT fk_product_category
+FOREIGN KEY (category_id) REFERENCES category(id)
+ON DELETE RESTRICT;
