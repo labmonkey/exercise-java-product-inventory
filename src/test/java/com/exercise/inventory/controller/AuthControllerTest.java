@@ -67,7 +67,7 @@ class AuthControllerTest {
         when(authenticationManager.authenticate(any())).thenThrow(new BadCredentialsException("Bad credentials"));
 
         // Act & Assert
-        mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(authRequest))).andExpect(status().isForbidden());
+        mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(authRequest))).andExpect(status().isUnauthorized());
     }
 
     @Test
@@ -78,7 +78,7 @@ class AuthControllerTest {
         when(authenticationManager.authenticate(any())).thenThrow(new BadCredentialsException("Bad credentials"));
 
         // Act & Assert
-        mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(authRequest))).andExpect(status().isForbidden());
+        mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(authRequest))).andExpect(status().isUnauthorized());
     }
 
     @Test
@@ -89,7 +89,7 @@ class AuthControllerTest {
         when(authenticationManager.authenticate(any())).thenThrow(new UsernameNotFoundException("Bad credentials"));
 
         // Act & Assert
-        mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(authRequest))).andExpect(status().isForbidden());
+        mockMvc.perform(post("/auth/login").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(authRequest))).andExpect(status().isUnauthorized());
     }
 
     @Test
