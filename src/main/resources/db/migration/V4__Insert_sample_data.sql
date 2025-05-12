@@ -22,7 +22,7 @@ INSERT INTO user_roles (id, role) VALUES
 (1, 'FULL'),
 (2, 'READER');
 
--- BCrypt hash for 'password' is $2a$10$GiseH9P5F9.o9X73X.XjAeVjA.xP2x.N.Kk5.LqL0QLZ0QLZ0QLZ0
+-- BCrypt hash for 'password'
 INSERT INTO users (id, username, password, role_id) VALUES
-(1, 'admin', '$2a$10$GiseH9P5F9.o9X73X.XjAeVjA.xP2x.N.Kk5.LqL0QLZ0QLZ0QLZ0', 1),
-(2, 'user', '$2a$10$GiseH9P5F9.o9X73X.XjAeVjA.xP2x.N.Kk5.LqL0QLZ0QLZ0QLZ0', 2);
+(1, 'admin', '$2a$10$GBcgm3rxusrlYJ3IUu1Pr.5u2koK8OLWHxIku3RRGGhTfdsTApzqC', 1),
+(2, 'user', '$2a$10$GBcgm3rxusrlYJ3IUu1Pr.5u2koK8OLWHxIku3RRGGhTfdsTApzqC', 2);

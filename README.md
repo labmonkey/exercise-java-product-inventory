@@ -42,6 +42,13 @@ Once the application is running, you can access:
 - Username: sa
 - Password: password
 
+## API Documentation (Swagger UI)
+
+Once the application is running, you can access the interactive API documentation via Swagger UI at:
+- [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+You can use the Swagger UI to view all available endpoints, their request/response formats, and test them directly from your browser. For secured endpoints, you can use the "Authorize" button to authenticate using a JWT token obtained from the `/auth/login` endpoint.
+
 ## API Endpoints
 
 ### Authentication
