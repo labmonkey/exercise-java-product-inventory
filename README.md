@@ -108,3 +108,14 @@ The JAR file will be created in the `target` directory and can be run with:
 java -jar target/product-inventory-0.0.1-SNAPSHOT.jar
 ```
 
+## Additional features and improvements to consider
+
+Below is a list of features that I did not manage to implement in given time.
+
+- Extend User API to allow users to register, change password
+- Allow Admin to manage the users and data via CLI (safely, not exposed)
+- Add [Spring Boot Caching](https://docs.spring.io/spring-boot/reference/io/caching.html) as per RESTful principles
+- Use more HTTP error codes in cases that don't have them
+- Add some functional tests without mocking and integration tests
+- use [MapStruct](https://mapstruct.org/)
+- consider using [TestContainers](https://testcontainers.com/) (might be unnecessary for this simple project)
